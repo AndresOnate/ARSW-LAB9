@@ -114,6 +114,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
+      
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ebaf643e-f675-4417-8fa1-44406d6f0267)
+
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9bc4643f-801f-4a16-814c-6fc2d30abe3f)
+
     * Si hubo fallos documentelos y explique.
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
