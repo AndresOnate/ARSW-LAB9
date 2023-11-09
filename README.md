@@ -102,8 +102,35 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
-12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
-13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
+    * 1000000:
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9aa875fc-9fae-4c85-b7f5-0617d20fcb98)
+    * 1010000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/77dee4f4-1dc2-4ef5-841a-2dcb04108785)
+    * 1020000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/dc85a3e7-0821-41aa-9f1a-70aab49aff8c)
+    * 1030000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/c76f40a5-38a1-47d7-b14a-fb6421d5dfad)
+    * 1040000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/6075fe6d-6257-4c8b-b110-10cce2217407)
+    * 1050000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8102e3eb-955d-420d-9ad7-9025d6f95e8e)
+    * 1060000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8d9bfab0-9b3c-4452-b007-b8d65a3046e8)
+    * 1070000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/e2ed2ad1-db79-40a0-8f86-f2ee62e11bee)
+    * 1080000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0c51ff26-1caf-4475-aa4c-2bbd988e066e)
+    * 1090000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/cb4723c6-75e7-428f-9623-b0b445afe692)
+
+      Consumo de CPU:
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ace8349b-f0a0-4f25-9c28-b680252490c1)
+
+
+
+      
+13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
+14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
@@ -127,8 +154,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/7cee9692-e546-47b4-87c5-16055dcc8289)
 10. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 11. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
-12. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-13. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+    
+    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/255ade6e-a175-41f6-8800-e24ca872147c)
+
+13. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+14. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
 
