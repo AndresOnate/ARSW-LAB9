@@ -58,16 +58,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
-    * 1000000
+    * 1000000:
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/1af298b3-e387-4cd8-b353-4c20f45a8e7d)
     * 1010000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/6af93b63-83f9-4c58-a643-db8fc5cd0670)
     * 1020000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ef1b6fcf-963a-4613-892c-b81ecc717e09)
     * 1030000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/dadd45ab-9ee2-45c9-ba3d-c8c224fce780)
     * 1040000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/4faa7202-8de2-456e-9857-5489dece9c70)
     * 1050000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/45d813a6-4fa3-4c0a-91b3-89bff9ed4be0)
     * 1060000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/e82af39a-e661-4400-a019-7eac0e5c4bdc)
     * 1070000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/72e7bbec-e1c5-4552-b799-9d4ec4ee897e)
     * 1080000
-    * 1090000    
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/3eff48d9-d5c0-4ecf-b95e-58be9092bb2f)
+    * 1090000
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/be99b56e-06fa-40b0-9918-cd40ba889452)
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
