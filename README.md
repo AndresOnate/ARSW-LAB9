@@ -128,12 +128,12 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
       Ejecución en postman:
       
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/a08a53fb-e0e3-4093-a20f-4200361ae68c)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0feac188-e4d8-46d5-ab17-5576da126177)
 
       Uso de CPU:
 
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/6cce54ad-83bb-4ecd-ac7a-0165bd8819dd)
-   
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/d9729cd7-7579-4c95-9512-4ac7935de453)
+
 13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
