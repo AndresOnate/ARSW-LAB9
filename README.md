@@ -175,7 +175,37 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    tráfico en el puerto TCP 80 (HTTP) desde cualquier dirección IP de origen, pero denegar el tráfico en el puerto TCP 22 (SSH) de todas las direcciones IP confiables, excepto unas pocas. S i no se configura esta rega el trafico que llega al puerto 3000 sería    
    descartado.   
 7. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+
+   **Tabla de tiempos sin escalamiento vertical**
    
+      | Número | Tiempo   |
+      |--------|----------|
+      | 1000000| 16.26s   |
+      | 1010000| 16.44s   |
+      | 1020000| 16.87s   |
+      | 1030000| 17.28s   |
+      | 1040000| 17.71s   |
+      | 1050000| 17.99s   |
+      | 1060000| 18.42s   |
+      | 1070000| 18.79s   |
+      | 1080000| 19.10s   |
+      | 1090000| 19.65s   |
+
+   **Tabla de tiempos sin escalamiento vertical**
+
+      | Número   | Tiempo  |
+      |----------|---------|
+      | 1000000  | 19.80s  |
+      | 1010000  | 22.27s  |
+      | 1020000  | 22.09s  |
+      | 1030000  | 22.57s  |
+      | 1040000  | 23.16s  |
+      | 1050000  | 22.09s  |
+      | 1060000  | 22.54s  |
+      | 1070000  | 23.89s  |
+      | 1080000  | 24.93s  |
+      | 1090000  | 25.52s  |
+ 
 9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 10. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
