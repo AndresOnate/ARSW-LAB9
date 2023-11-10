@@ -143,11 +143,41 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    
    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/b7b2ecfd-7426-4735-9cb0-b8a77033d095)
 
+   Se crean 7 recursos:
+   - Una maquina virtual VERTICAL-SCALABILITY
+   - Una dirección IP pública VERTICAL-SCALABILITY-ip
+   - Un grupo de seguridad VERTICAL-SCALABILITY-ip
+   - Una red virtual VERTICAL-SCALABILITY-vnet
+   - Una interfaz de red VERTICAL-SCALABILITY571_z1
+   - Un disco VERTICAL-SCALABILITY-disk
+   - Claves SSH VERTICAL-SCALABILITY_Key
+
 3. ¿Brevemente describa para qué sirve cada recurso?
-4. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
-5. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
-6. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
-7. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+
+   Máquina virtual: Azure Virtual Machines son instancias de servicio de imagen que proporcionan recursos informáticos a petición y escalables a precios basados en el uso. En general, una máquina virtual se comporta como un servidor: es un equipo dentro de un equipo
+   que proporciona al usuario la misma experiencia que tendría con el propio sistema operativo host. En general, las máquinas virtuales están en un espacio aislado del resto del sistema, es decir, el software de una máquina virtual no puede interferir ni alterar el       propio servidor subyacente. Cada máquina virtual proporciona su propio hardware virtual, que incluye CPU, memoria, unidades de disco duro, interfaces de red y otros dispositivos.
+
+   Dirección IP pública: Las direcciones IP públicas permiten a los recursos de Internet la comunicación entrante a los recursos de Azure. Permiten que los recursos de Azure se comuniquen con los servicios de Azure orientados al público e Internet.
+
+   Grupo de seguridad: Los grupos de seguridad  permiten configurar la seguridad de red como una extensión natural de la estructura de una aplicación, lo que le permite agrupar máquinas virtuales y directivas de seguridad de red basadas en esos grupos.
+
+   Red virtual: Azure Virtual Network es un servicio que proporciona el bloque de compilación fundamental para su red privada en Azure. Una instancia del servicio (una red virtual) permite que muchos tipos de recursos de Azure se comuniquen de forma segura entre sí,      Internet y redes locales. Estos recursos de Azure incluyen máquinas virtuales (VM). Una red virtual es similar a una red tradicional con la que trabajaría en su propio centro de datos. Pero aporta ventajas adicionales de la infraestructura Azure, como escala,       
+   disponibilidad y aislamiento.
+
+   Interfaz de red: Una interfaz de red (NIC) permite que una máquina virtual de Azure se comunique con Internet, Azure y los recursos locales.
+
+   Disco: Azure Managed Disks es un almacenamiento de bloques duradero y de alto rendimiento diseñado para usarse con Azure Virtual Machines y Azure VMware Solution. Azure ofrece cuatro opciones de almacenamiento en disco: Almacenamiento en disco Ultra, SSD Premium,      SSD estándar y HDD estándar. Azure Managed Disks tienen el precio del nivel más cercano según el tamaño específico del disco y se facturan cada hora
+
+5. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+   El comando npm FibonacciApp.js inicia el servidor haciendo uso del puerto 3000 por defecto, al cerrar la conexión el proceso se cierra y la aplicación deja de funcionar. En Azure, las reglas de puerto de entrada se usan para controlar el tráfico que puede llegar a 
+   las máquinas virtuales (VM) u otros recursos en una red virtual. Estas reglas generalmente se definen como parte de un grupo de seguridad de red (NSG), que es una colección de reglas de seguridad que se pueden aplicar a una o más máquinas virtuales u otros recursos.
+   Las reglas de puerto de entrada se utilizan normalmente para controlar el acceso a servicios o aplicaciones que se ejecutan en máquinas virtuales, como servidores web o servidores de bases de datos. Por ejemplo, podría crear una regla de entrada para permitir el 
+   tráfico en el puerto TCP 80 (HTTP) desde cualquier dirección IP de origen, pero denegar el tráfico en el puerto TCP 22 (SSH) de todas las direcciones IP confiables, excepto unas pocas. S i no se configura esta rega el trafico que llega al puerto 3000 sería    
+   descartado.   
+7. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+   
+9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+10. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
       
       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ebaf643e-f675-4417-8fa1-44406d6f0267)
@@ -155,15 +185,15 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9bc4643f-801f-4a16-814c-6fc2d30abe3f)
 
     * Si hubo fallos documentelos y explique.
-8. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+11. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/7cee9692-e546-47b4-87c5-16055dcc8289)
-10. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
-11. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+12. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+13. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
     
     ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/255ade6e-a175-41f6-8800-e24ca872147c)
 
-13. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-14. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+14. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+15. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
 
