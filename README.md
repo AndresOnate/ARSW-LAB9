@@ -200,16 +200,16 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
       | Número   | Tiempo  |
       |----------|---------|
-      | 1000000  | 19.80s  |
-      | 1010000  | 22.27s  |
-      | 1020000  | 22.09s  |
-      | 1030000  | 22.57s  |
-      | 1040000  | 23.16s  |
-      | 1050000  | 22.09s  |
-      | 1060000  | 22.54s  |
-      | 1070000  | 23.89s  |
-      | 1080000  | 24.93s  |
-      | 1090000  | 25.52s  |
+      | 1000000  | 20.51s  |
+      | 1010000  | 21.61s  |
+      | 1020000  | 20.74s  |
+      | 1030000  | 23.10s  |
+      | 1040000  | 23.60s  |
+      | 1050000  | 23.29s  |
+      | 1060000  | 24.54s  |
+      | 1070000  | 24.72s  |
+      | 1080000  | 25.24s  |
+      | 1090000  | 24.85s  |
  
 9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 10. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
