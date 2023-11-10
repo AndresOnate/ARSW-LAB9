@@ -138,7 +138,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/d9729cd7-7579-4c95-9512-4ac7935de453)
 
 13. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
-14. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
+    Podemos apreciar con las pruebas hechas a la pagina web que al escalar verticalmente el recurso los tiempos de respuesta no mejoran, pasamos de un tiempo max de 16.5s a 21.4s con las pruebas hechas con    
+    postman. Sin embargo, al analizar las graficas de uso de CPU encontramos que se reduce del 70% al 30%, validando que la capacidad del sistema mejorar considerablemente.
+15. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
