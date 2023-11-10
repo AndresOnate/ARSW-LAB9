@@ -106,28 +106,28 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
     * 1000000:
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9aa875fc-9fae-4c85-b7f5-0617d20fcb98)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/11f8ba6e-2495-46ab-90ca-e6893f9df43c)
     * 1010000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/77dee4f4-1dc2-4ef5-841a-2dcb04108785)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/f61f4190-1326-4fc8-aaf8-3766ab9d34aa)
     * 1020000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/dc85a3e7-0821-41aa-9f1a-70aab49aff8c)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/a71b341f-a8a3-4baa-b562-4998202d5d22)
     * 1030000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/c76f40a5-38a1-47d7-b14a-fb6421d5dfad)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0c34da47-555c-4009-8ad9-0f4b90bc6467)
     * 1040000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/6075fe6d-6257-4c8b-b110-10cce2217407)
+       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9cf19c5c-cc1c-4be0-bbb6-8f90c2905a1b)
     * 1050000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8102e3eb-955d-420d-9ad7-9025d6f95e8e)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/e5fed17d-c395-4831-9bc1-5f9891448d52)
     * 1060000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8d9bfab0-9b3c-4452-b007-b8d65a3046e8)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/d83cda4c-39f8-417e-bbdd-1cdbd56b8746)
     * 1070000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/e2ed2ad1-db79-40a0-8f86-f2ee62e11bee)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/586a39dc-db06-49f3-b973-1c6b942c2d6b)
     * 1080000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0c51ff26-1caf-4475-aa4c-2bbd988e066e)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0e4b3354-699b-4b51-a8fa-e024c768ab3d)
     * 1090000
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/cb4723c6-75e7-428f-9623-b0b445afe692)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ab9c4d1a-f5fd-42a3-be8e-377697a84bb7)
 
       Consumo de CPU:
-      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ace8349b-f0a0-4f25-9c28-b680252490c1)
+      ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/02b3ee8c-4213-4958-a8f3-430fb53428dd)
 
       Ejecución en postman:
       
