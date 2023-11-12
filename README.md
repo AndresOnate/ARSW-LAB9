@@ -215,8 +215,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
  ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/c2e56bae-625c-44c3-92cb-db00f921e230)
 
- 
+ Al analizar el código de la aplicación encontramos que no se hace uso de un algoritmo eficiente para realizar el calculo del enésimo valor de la secuencia de Fibonnaci:
 
+ ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/cd748fd3-0885-4a2d-847c-870c7fb4498b)
+ 
+Lo que implica un alto consumo de CPU en la VM.
  
 11. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
@@ -225,16 +228,43 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9bc4643f-801f-4a16-814c-6fc2d30abe3f)
 
+      Al ejecutar las pruebas desde la máquina con características Standard B1ls el tiempo promedio de 15.8 segundos. Además, a pesar de que las pruebas se ejecutan bajo un número específico, los tiempos de  
+      respuesta son distintos.
+
     * Si hubo fallos documentelos y explique.
-12. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+
+      No hubo fallos en la ejecución.
+      
+11. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/7cee9692-e546-47b4-87c5-16055dcc8289)
+   
+      | Tamaño de Instancia | Características                                                                      |
+      |---------------------|------------------------------------------------------------------------------------- |
+      | B1ls                | - Procesador: 1 núcleo, 0.5 GB de RAM, 4 GiB de almacenamiento temporal,  $3,80/mes  |
+      | B2ms                | - Procesador: 2 núcleos, 8 GB de RAM, 16 GiB de almacenamiento temporal,  $60,74/mes |
+
+    Podemos apreciar que el tamaño B2ms cuanta con una capacidad de procesamiento superior.
+
 13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
-14. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+    Como ya se ha analizado antes, mediante las gráficas de rendimiento, encontramos que es una buena solución este escalamiento vertical. Cuando la aplicación reciba múltiples solicitudes necesitará de 
+    mejores características, el tamaño B1ls usaba casi por completo su capacidad, mientras al escalar el recurso, el uso de CPU no llegaba al 50%.
+    Se debe considerar cambiar el algoritmo por uno más eficiente.
+
+15. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
     
     ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/255ade6e-a175-41f6-8800-e24ca872147c)
 
-15. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
-16. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+    La máquina virtual se reinicia durante el proceso de ajuste del tamaño, lo que corta la conexión con el recurso.
+
+17. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+   Sí, con el nuevo tamaño, la máquina virtual dispone de más recursos (Núcleos y memoria RAM) para realizar los cálculos. En la gráfica de rendimiento de la CPU podemos apreciar un mejor uso de los recursos, 
+   pero los tiempos de respuesta de las solicitudes son más largos con este tamaño, lo que podemos apreciar al realizar las solicitudes vía postman y la página web.
+
+   ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/0feac188-e4d8-46d5-ab17-5576da126177)
+
+   El tiempo de respuesta para las solicitudes con este tamaño es de 21.1s
+         
+19. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
 
