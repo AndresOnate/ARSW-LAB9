@@ -310,6 +310,11 @@ Antes de continuar puede eliminar el grupo de recursos anterior para evitar gast
 
 ![](images/part2/part2-vn-create.png)
 
+Implementación de los recursos:
+
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8795f101-7954-4f0a-ac31-d33577687bd3)
+
+
 #### Crear las maquinas virtuales (Nodos)
 
 Ahora vamos a crear 3 VMs (VM1, VM2 y VM3) con direcciones IP públicas standar en 3 diferentes zonas de disponibilidad. Después las agregaremos al balanceador de carga.
