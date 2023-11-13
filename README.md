@@ -376,12 +376,82 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 **Preguntas**
 
 * ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+
+   Estos son los servicios de equilibrio de carga principales actualmente disponibles en Azure:
+
+   **Azure Front Door** es una red de entrega de aplicaciones que proporciona equilibrio de carga global y un servicio de aceleración de sitios para las aplicaciones web. Ofrece funcionalidades de capa 7 para 
+   la aplicación, como la descarga SSL, el enrutamiento basado en rutas, la conmutación por error rápida y el almacenamiento en caché para mejorar el rendimiento y la alta disponibilidad de las aplicaciones.
+   
+   **Traffic Manager** es un equilibrador de carga de tráfico basado en DNS que le permite distribuir el tráfico de forma óptima a servicios de regiones de Azure globales, al tiempo que proporciona una alta    
+   disponibilidad y capacidad de respuesta. Dado que Traffic Manager es un servicio de equilibrio de carga basado en DNS, solo equilibra la carga en el nivel del dominio. Por ese motivo, no puede conmutar por 
+   error tan rápidamente como con Azure Front Door, debido a los desafíos comunes relacionados con el almacenamiento en caché de DNS y a los sistemas que no respetan los TTL de DNS.
+   
+   **Application Gateway** proporciona un controlador de entrega de aplicaciones como servicio, que ofrece diversas funcionalidades de equilibrio de carga de capa 7. Úselo para optimizar la productividad de    
+   las granjas de servidores web al traspasar la carga de la terminación SSL con mayor actividad de la CPU a la puerta de enlace.
+   
+   **Load Balancer** proporciona un servicio de equilibrio de carga de capa 4 con latencia muy baja y alto rendimiento (entrante y saliente) para todos los protocolos UDP y TCP. Se diseñó para administrar 
+   millones de solicitudes por segundo, a la vez que garantiza que la solución tiene una alta disponibilidad. Load Balancer tiene redundancia de zona, lo que asegura una alta disponibilidad en todas las zonas 
+   de disponibilidad. Admite una topología de implementación regional y una topología entre regiones.
+
+  En Azure, el término SKU (Stock Keeping Unit) se refiere a las unidades de mantenimiento de existencias y se utiliza para describir distintas versiones de un recurso o servicio. Para los balanceadores de 
+  carga, las SKU determinan la capacidad, el rendimiento y las características. Algunas SKU comunes para los balanceadores de carga son:
+   Básico (Basic):
+   - Limitado a una sola instancia de máquina virtual.
+   - Sin zonas de disponibilidad.
+   Estándar (Standard):
+   - Admite múltiples instancias de máquinas virtuales.
+   - Permite configurar zonas de disponibilidad para mayor disponibilidad.
+
+   La IP pública en el balanceador de carga sirve como punto de entrada para las aplicaciones y permite una distribución equitativa del tráfico entre las instancias del servicio para mejorar la disponibilidad 
+   y el rendimiento.
+
 * ¿Cuál es el propósito del *Backend Pool*?
+   El Backend Pool agrupa instancias de backend, como máquinas virtuales, para distribuir equitativamente el tráfico entrante, mejorar la alta disponibilidad mediante la redirección de tráfico en caso de 
+   fallos, permitir la escalabilidad horizontal ante aumentos de carga, y facilitar la gestión de diferentes versiones o entornos de aplicaciones. Además, ofrece opciones de afinamiento de rendimiento y la 
+   capacidad de dirigir tipos específicos de tráfico a distintos pools, lo que lo convierte en un componente esencial para la eficiencia y confiabilidad de servicios en entornos distribuidos y basados en la 
+   nube.
+
 * ¿Cuál es el propósito del *Health Probe*?
+  Su propósito principal radica en el monitoreo activo, la detección de fallos y la garantía de la disponibilidad de los servicios. Esta sonda envía solicitudes regulares a las instancias de backend, 
+  verificando sus respuestas y asegurándose de que estén en un estado saludable. Si una instancia no cumple con los criterios establecidos, el balanceador de carga puede excluir temporalmente esa instancia del 
+  tráfico, contribuyendo así a la escalabilidad dinámica y optimizando el rendimiento general del sistema. La Health Probe es esencial para garantizar que el tráfico se dirija únicamente a instancias de 
+  backend que puedan responder eficientemente, mejorando así la fiabilidad y capacidad de respuesta de los servicios.
+  
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+  Una Load Balancing Rule tiene como objetivo primordial dirigir de manera eficiente y equitativa el tráfico entrante hacia las instancias de backend. Esta regla permite configurar el enrutamiento basado en 
+  diversos criterios, como rutas URL o puertos, proporcionando así una distribución uniforme de las solicitudes entre las instancias disponibles.
+  Las sesiones persistentes, como IP Affinity o Cookie Affinity, estas son esenciales para mantener la continuidad de una sesión entre un cliente y un servidor específico. Aunque son fundamentales para 
+  garantizar una experiencia de usuario coherente, es crucial considerar cómo afectarán la escalabilidad del sistema, ya que pueden limitar la capacidad del balanceador de carga para distribuir equitativamente 
+  las solicitudes entre las instancias de backend, especialmente en situaciones de carga desigual.
+  La limitación en la capacidad del balanceador de carga se debe al hecho de que las sesiones persistentes, especialmente las sesiones sticky o basadas en afinidad, vinculan un cliente específico a una 
+  instancia particular de backend durante la duración de su sesión. Siempre que ese cliente realice solicitudes, el balanceador de carga debe enviarlas a la misma instancia de backend para mantener la 
+  persistencia de la sesión.
+  
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
+  Una Virtual Network (Red Virtual) es una red aislada y definida por software que permite a las máquinas virtuales (VMs) y otros recursos de 
+  la nube comunicarse entre sí de manera segura, independientemente de su ubicación geográfica. Proporciona un entorno de red similar al de una red física tradicional, pero con la flexibilidad y la 
+  escalabilidad inherentes a la infraestructura en la nube.
+  Una Subnet (Subred) es una subdivisión de una red más grande, ya sea física o virtual. En el contexto de las redes virtuales, las subredes se utilizan para segmentar y organizar recursos de manera lógica. 
+  Cada subred tiene su propio rango de direcciones IP y puede contener un conjunto específico de recursos de la red.
+  Los conceptos de address space (espacio de direcciones) y address range (rango de direcciones) están relacionados con la asignación de direcciones IP dentro de una red virtual y sus subredes:
+  Address Space (Espacio de Direcciones): Se refiere al conjunto total de direcciones IP que se pueden usar en una red virtual. Especifica el rango completo de direcciones IP que la red puede abarcar.
+  Address Range (Rango de Direcciones): Es un subconjunto del espacio de direcciones y define el rango de direcciones IP que se asigna a una subred específica dentro de la red virtual. Cada subred tiene su    
+  propio rango de direcciones único.
+
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+  Las Availability Zones (Zonas de Disponibilidad) son centros de datos físicamente separados dentro de una región de servicios en la nube como Azure de Microsoft. Cada zona de disponibilidad es independiente 
+  en términos de alimentación, refrigeración y redes, lo que significa que están diseñadas para resistir fallas de manera aislada. La implementación de recursos en diferentes zonas de disponibilidad mejora la 
+  resiliencia y la alta disponibilidad de las aplicaciones y servicios.
+  Seleccionar tres zonas de disponibilidad es una práctica recomendada para aumentar la redundancia y la resistencia a fallos. Al distribuir recursos en tres zonas, la 
+  aplicación o servicio puede mantenerse en funcionamiento incluso si una zona completa experimenta una interrupción. Esto contribuye a la continuidad del servicio y a la capacidad de recuperación frente a 
+  fallas en una ubicación específica.
+  Cuando una IP es "zone-redundant" (redundante en zonas), significa que la IP está asociada a un recurso que se extiende a través de múltiples zonas de disponibilidad. Por ejemplo, si tienes una máquina 
+  virtual (VM) con una dirección IP asociada y esa VM está configurada para ser "zone-redundant", la máquina virtual puede migrar a otra zona de disponibilidad en caso de una falla en la zona actual.
+
 * ¿Cuál es el propósito del *Network Security Group*?
+  El propósito del Network Security Group (NSG) en Azure es proporcionar un nivel adicional de seguridad al permitir o denegar el tráfico de red hacia y desde los recursos de Azure, como máquinas virtuales, 
+  subredes y redes virtuales. El NSG actúa como un firewall virtual que filtra el tráfico basándose en reglas que especificas.
+  
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
