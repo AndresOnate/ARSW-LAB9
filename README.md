@@ -266,6 +266,24 @@ Lo que implica un alto consumo de CPU en la VM.
          
 19. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
+    Datos de la petición 1:
+
+    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/b72e7ee9-4c91-4724-8181-0f66e7ae90e6)
+
+   Datos de la petición 2:
+
+   ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/1988624c-3e37-47ca-9ed7-27db751b0e92)
+
+   Datos de la petición 3:
+   
+   ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/a70b7f02-c247-4c26-96c0-4e6ee635b4c7)
+
+   Datos de la petición 4:
+   
+   ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/4ce8628f-56f4-4265-96ee-4214082ddf63)
+
+   Los tiempos de respuesta no mejoraron
+
 ### Parte 2 - Escalabilidad horizontal
 
 #### Crear el Balanceador de Carga
