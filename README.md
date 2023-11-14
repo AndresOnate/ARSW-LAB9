@@ -362,14 +362,13 @@ Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, si
 
 ```
 http://52.155.223.248/
-
+```
 ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/cf0dfd45-934c-431e-ad6a-282957c1c30b)
-
+```
 http://52.155.223.248/fibonacci/1
-
+```
 ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/6af5d067-ff1c-4ec5-85ed-dbed6a32e8bb)
 
-```
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
