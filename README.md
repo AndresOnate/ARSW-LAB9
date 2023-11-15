@@ -493,11 +493,12 @@ VM2:
    | Tiempos de Respuesta   |          21.1 s             |        16.8 s               |
    | Cantidad de Peticiones |  2 peticiones paralelas     |   2 peticiones paralelas    |
    | Costos                 |      $60,74/mes             |           $34.2/mes         |
-   | Uso de CPU             |         47,90%              |
+   | Uso de CPU             |         47,90%              |    93% VM1y 99% VM2         |
 
   
 * Presente el Diagrama de Despliegue de la solución.
-
+  
+   ![Deployment Diagram0](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/8a333837-22d4-49a7-b971-589c81e495f0)
 
 
 
