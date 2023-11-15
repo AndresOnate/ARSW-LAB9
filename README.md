@@ -1,4 +1,4 @@
-![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/d3ae145c-5912-40e0-92a1-11371eea12c6)### Escuela Colombiana de Ingeniería
+### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
@@ -487,6 +487,15 @@ VM2:
   subredes y redes virtuales. El NSG actúa como un firewall virtual que filtra el tráfico basándose en reglas que especificas.
   
 * Informe de newman 1 (Punto 2)
+  
+   | Métrica                | Escalamiento Vertical       | Escalamiento Horizontal     |
+   |------------------------|-----------------------------|-----------------------------|
+   | Tiempos de Respuesta   |          21.1 s             |        16.8 s               |
+   | Cantidad de Peticiones |  2 peticiones paralelas     |   2 peticiones paralelas    |
+   | Costos                 |      $60,74/mes             |           $34.2/mes         |
+   | Uso de CPU             |         47,90%              |
+
+  
 * Presente el Diagrama de Despliegue de la solución.
 
 
