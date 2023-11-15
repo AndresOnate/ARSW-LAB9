@@ -1,4 +1,4 @@
-### Escuela Colombiana de Ingeniería
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/d3ae145c-5912-40e0-92a1-11371eea12c6)### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
@@ -392,6 +392,20 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
 newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
 ```
+No es posible agregar otra maquina virtual, ejecutamos las peticiones en paralelo:
+
+
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/61cbefea-d676-49b6-92c9-01908534b714)
+
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/4bdfb45b-af24-466d-8196-442942a4ffc5)
+
+VM1:
+
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/9160d545-8c05-4b0e-920a-d11fa61ba15b)
+
+VM2:
+
+![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/155f96e6-357e-4217-a09b-7cbe6a7fe542)
 
 **Preguntas**
 
