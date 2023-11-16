@@ -157,7 +157,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
    - Un disco VERTICAL-SCALABILITY-disk
    - Claves SSH VERTICAL-SCALABILITY_Key
 
-3. ¿Brevemente describa para qué sirve cada recurso?
+2. ¿Brevemente describa para qué sirve cada recurso?
 
    Máquina virtual: Azure Virtual Machines son instancias de servicio de imagen que proporcionan recursos informáticos a petición y escalables a precios basados en el uso. En general, una máquina virtual se comporta como un servidor: es un equipo dentro de un equipo
    que proporciona al usuario la misma experiencia que tendría con el propio sistema operativo host. En general, las máquinas virtuales están en un espacio aislado del resto del sistema, es decir, el software de una máquina virtual no puede interferir ni alterar el       propio servidor subyacente. Cada máquina virtual proporciona su propio hardware virtual, que incluye CPU, memoria, unidades de disco duro, interfaces de red y otros dispositivos.
@@ -173,13 +173,13 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
    Disco: Azure Managed Disks es un almacenamiento de bloques duradero y de alto rendimiento diseñado para usarse con Azure Virtual Machines y Azure VMware Solution. Azure ofrece cuatro opciones de almacenamiento en disco: Almacenamiento en disco Ultra, SSD Premium,      SSD estándar y HDD estándar. Azure Managed Disks tienen el precio del nivel más cercano según el tamaño específico del disco y se facturan cada hora
 
-5. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
    El comando npm FibonacciApp.js inicia el servidor haciendo uso del puerto 3000 por defecto, al cerrar la conexión el proceso se cierra y la aplicación deja de funcionar. En Azure, las reglas de puerto de entrada se usan para controlar el tráfico que puede llegar a 
    las máquinas virtuales (VM) u otros recursos en una red virtual. Estas reglas generalmente se definen como parte de un grupo de seguridad de red (NSG), que es una colección de reglas de seguridad que se pueden aplicar a una o más máquinas virtuales u otros recursos.
    Las reglas de puerto de entrada se utilizan normalmente para controlar el acceso a servicios o aplicaciones que se ejecutan en máquinas virtuales, como servidores web o servidores de bases de datos. Por ejemplo, podría crear una regla de entrada para permitir el 
    tráfico en el puerto TCP 80 (HTTP) desde cualquier dirección IP de origen, pero denegar el tráfico en el puerto TCP 22 (SSH) de todas las direcciones IP confiables, excepto unas pocas. S i no se configura esta rega el trafico que llega al puerto 3000 sería    
    descartado.   
-7. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 
    **Tabla de tiempos sin escalamiento vertical**
    
@@ -211,7 +211,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
       | 1080000  | 25.24s  |
       | 1090000  | 24.85s  |
  
-9. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 
  ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/c2e56bae-625c-44c3-92cb-db00f921e230)
 
@@ -221,7 +221,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
  
 Lo que implica un alto consumo de CPU en la VM.
  
-11. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
       
       ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/ebaf643e-f675-4417-8fa1-44406d6f0267)
@@ -235,7 +235,7 @@ Lo que implica un alto consumo de CPU en la VM.
 
       No hubo fallos en la ejecución.
       
-11. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
    ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/7cee9692-e546-47b4-87c5-16055dcc8289)
    
       | Tamaño de Instancia | Características                                                                      |
@@ -245,18 +245,18 @@ Lo que implica un alto consumo de CPU en la VM.
 
     Podemos apreciar que el tamaño B2ms cuanta con una capacidad de procesamiento superior.
 
-13. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
     Como ya se ha analizado antes, mediante las gráficas de rendimiento, encontramos que es una buena solución este escalamiento vertical. Cuando la aplicación reciba múltiples solicitudes necesitará de 
     mejores características, el tamaño B1ls usaba casi por completo su capacidad, mientras al escalar el recurso, el uso de CPU no llegaba al 50%.
     Se debe considerar cambiar el algoritmo por uno más eficiente.
 
-15. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
     
     ![image](https://github.com/AndresOnate/ARSW-LAB9/assets/63562181/255ade6e-a175-41f6-8800-e24ca872147c)
 
     La máquina virtual se reinicia durante el proceso de ajuste del tamaño, lo que corta la conexión con el recurso.
 
-17. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
    Sí, con el nuevo tamaño, la máquina virtual dispone de más recursos (Núcleos y memoria RAM) para realizar los cálculos. En la gráfica de rendimiento de la CPU podemos apreciar un mejor uso de los recursos, 
    pero los tiempos de respuesta de las solicitudes son más largos con este tamaño, lo que podemos apreciar al realizar las solicitudes vía postman y la página web.
 
@@ -264,7 +264,7 @@ Lo que implica un alto consumo de CPU en la VM.
 
    El tiempo de respuesta para las solicitudes con este tamaño es de 21.1s
          
-19. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
     Datos de la petición 1:
 
